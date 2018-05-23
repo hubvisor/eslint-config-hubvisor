@@ -1,0 +1,14 @@
+{
+  "name": "@hubvisor/eslint-config-hubvisor",
+  "version": "0.1.0",
+  "description": "Hubvisor eslint configuration",
+  "repository": "https://github.com/hubvisor/eslint-config-hubvisor.git",
+  "author": "Hubvisor",
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-vue": "^4.5.0"
+  }
+}
