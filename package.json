@@ -1,6 +1,6 @@
 {
   "name": "@hubvisor/eslint-config-hubvisor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Hubvisor eslint configuration",
   "repository": "https://github.com/hubvisor/eslint-config-hubvisor.git",
   "author": "Hubvisor",
