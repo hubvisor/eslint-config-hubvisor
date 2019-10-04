@@ -53,7 +53,10 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off', // this syntax is already a warning !
     '@typescript-eslint/camelcase': [ 'error', {
       properties: 'never' // we need to enforce it
-    } ]
+    } ],
+    // No-useless-constructor bugs with typescript constructor overload
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'error'
   },
   overrides: [ {
     files: [
