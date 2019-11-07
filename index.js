@@ -41,12 +41,10 @@ module.exports = {
     } ],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/array-type': [ 'error', 'array-simple' ],
-    '@typescript-eslint/explicit-member-accessibility': [ 'error', {
-      overrides: {
-        constructors: 'no-public'
-      }
-    } ],
+    '@typescript-eslint/array-type': [ 'error', { default: 'array-simple' } ],
+    // enabled below for ts files only on mixed codebase, see :
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md#configuring-in-a-mixed-jsts-codebase
+    '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/no-unused-vars': [ 'error', {
       args: 'none'
     } ],
@@ -66,6 +64,11 @@ module.exports = {
     ],
     env: {
       jest: true
+    }
+  }, {
+    files: [ '*.ts', '*.tsx' ],
+    rules: {
+      '@typescript-eslint/explicit-member-accessibility': [ 'error', { overrides: { constructors: 'no-public' } } ]
     }
   } ]
 }
