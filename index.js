@@ -68,7 +68,10 @@ module.exports = {
   }, {
     files: [ '*.ts', '*.tsx' ],
     rules: {
-      'no-undef': 'off', // check https://github.com/typescript-eslint/typescript-eslint/issues/1116 and remove on upgrade if needed
+      // false positives on TS code, check upgrades and remove if needed :
+      'no-unused-expressions': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/1220
+      'no-undef': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/1116
+      //
       '@typescript-eslint/explicit-member-accessibility': [ 'error', { overrides: { constructors: 'no-public' } } ]
     }
   } ]
