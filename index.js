@@ -54,7 +54,12 @@ module.exports = {
     } ],
     // No-useless-constructor bugs with typescript constructor overload
     'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': 'error'
+    '@typescript-eslint/no-useless-constructor': 'error',
+    // Allow single and backquotes
+    'quotes': 'off',
+    '@typescript-eslint/quotes' : [ 'error', 'single', { avoidEscape : true, allowTemplateLiterals: true } ],
+    'quote-props': [ 'error', 'as-needed', { unnecessary: false } ],
+    'dot-notation': 'off'
   },
   overrides: [ {
     files: [
